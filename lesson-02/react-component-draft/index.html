@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .person {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid black;
+      width: 200px;
+    }
+
+    .persons_container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="persons_container">
+    <div class="person">
+      <h3>Name: Alice</h3>
+      <p>Age: 18</p>
+    </div>
+    <div class="person">
+      <h3>Name: Bob</h3>
+      <p>Age: 14</p>
+    </div>
+    <div class="person">
+      <h3>Name: Cris</h3>
+      <p>Age: 20</p>
+    </div>
+  </div>
+
+
+  <!-- <script type="module">
+    import users from './userMock.js';
+
+    export function generatorPerson(user) { // user is an object, has name and age
+      const personWrapper = document.createElement("div");
+      personWrapper.classList.add("person");
+
+      const personName = document.createElement("h3");
+      personName.innerText = `Name: ${user.name}`;
+
+      const personAge = document.createElement("p");
+      personAge.innerText = `Age: ${user.age}`;
+
+      personWrapper.appendChild(personName);
+      personWrapper.appendChild(personAge);
+
+      return personWrapper;
+    }
+    const personsContainer = document.querySelector(".persons_container");
+
+
+
+    for (let i = 0; i < 10; i++) {
+      const alicePerson = generatorPerson(users[i]);
+      personsContainer.appendChild(alicePerson);
+    }
+
+
+  </script> -->
+</body>
+
+</html>
