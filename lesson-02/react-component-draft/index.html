@@ -44,11 +44,28 @@
   </div>
 
 
-  <!-- <script type="module">
+
+
+  <script type="module">
+    const ul = document.createElement("ul");
+    const li1 = document.createElement("li");
+    li1.innerText = "1";
+    const li2 = document.createElement("li");
+    li2.innerText = "2";
+
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+
+    document.querySelector(".persons_container").appendChild(ul);
+
+
+
+
+
     import users from './userMock.js';
 
     export function generatorPerson(user) { // user is an object, has name and age
-      const personWrapper = document.createElement("div");
+      const personWrapper = document.createElement("div"); //
       personWrapper.classList.add("person");
 
       const personName = document.createElement("h3");
@@ -72,7 +89,7 @@
     }
 
 
-  </script> -->
+  </script>
 </body>
 
 </html>
