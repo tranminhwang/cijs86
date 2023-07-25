@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="./index.css">
 
+
+
 </head>
 
 <body>
@@ -61,10 +63,10 @@
                         <p><del>$100.000</del></p>
                         <p><strong>$70.000</strong></p>
                     </div>
-                    <button>Add To Cart</button>
+                    <button id="btn_1">Add To Cart</button>
                 </div>
             </div>
-            <div class="newProducts__item">
+            <!-- <div class="newProducts__item">
                 <div class="item__image">
                     <img src="./img/p7.jpg" alt="p5">
                     <div class="item__image-child">
@@ -114,7 +116,7 @@
                     </div>
                     <button>Add To Cart</button>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -253,8 +255,28 @@
                 </div>
             </div>
         </div>
-    </footer>
 
+        <h2 id="counter">0</h2>
+        <button id="inCrement">Increment</button>
+        <button id="deCrement">Decrement</button>
+    </footer>
+    <script>
+
+
+        document.querySelector("#inCrement").addEventListener("click", () => {
+            const counterEl = document.querySelector("#counter")
+            counterEl.innerHTML = Number(counterEl.textContent) + 1;
+        });
+
+        document.querySelector("#deCrement").addEventListener("click", () => {
+            const counterEl = document.querySelector("#counter")
+            counterEl.innerHTML = Number(counterEl.textContent) - 1;
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
