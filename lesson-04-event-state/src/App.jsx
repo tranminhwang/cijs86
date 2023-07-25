@@ -24,15 +24,24 @@ function App() {
     //   setCountValue(1);
     // }
     // count2++;
-    setCountValue((prev) => prev + 1);
-    // console.log("App render_1", countValue);
-    // setCountValue((prev) => prev + 1);
+    // setCountValue((prev) => {
+    //   console.log("prev_1", prev);
+    //   return prev + 1;
+    // });
+    // // console.log("App render_1", countValue);
+    // setCountValue((prev) => {
+    //   console.log("prev_2", prev);
+    //   return prev + 1;
+    // });
     // // console.log("App render_2", countValue);
-    // setCountValue((prev) => prev + 1);
+    // setCountValue((prev) => {
+    //   console.log("prev_3", prev);
+    //   return prev + 1;
+    // });
     // console.log("App render_3", countValue);
   };
 
-  console.log("App render", countValue);
+  // console.log("App render", countValue);
 
   const handleDecrement = () => {
     // console.log("handleDecrement_count", count);
@@ -41,8 +50,30 @@ function App() {
     // } else {
     //   setCountValue(1);
     // }
+    // setCountValue(countValue - 1);
+  };
 
-    setCountValue(countValue - 1);
+  // b2; ta0 1 state color, de thay doi mau cua div khi click button change color
+  const [color, setColor] = useState("red");
+
+  // B1: thêm 1 event click cho button change color
+
+  const changeColor = () => {
+    const colors = [
+      "red",
+      "green",
+      "blue",
+      "yellow",
+      "pink",
+      "black",
+      "gray",
+      "orange",
+    ];
+    const randomIdx = Math.floor(Math.random() * colors.length);
+    const randomColor = colors[randomIdx];
+    // random mau hex
+    // B3: thay doi mau cua div
+    setColor(randomColor);
   };
 
   return (
@@ -54,10 +85,10 @@ function App() {
         style={{
           width: "100px",
           height: "100px",
-          backgroundColor: "red",
+          backgroundColor: color,
         }}
       ></div>
-      <button>Change color</button>
+      <button onClick={changeColor}>Change color</button>
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>
     </div>
