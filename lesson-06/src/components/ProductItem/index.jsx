@@ -1,7 +1,10 @@
+import { ProductContext } from "../../App";
 import "./ProductItem.css";
+import { useContext } from "react";
 
 const ProductItem = (props) => {
-  const { product, addToCartFromApp } = props;
+  const { product } = props;
+  const { addToCartFromApp } = useContext(ProductContext);
 
   return (
     <div className="product-item">

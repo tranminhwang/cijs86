@@ -1,8 +1,9 @@
+import { useContext } from "react";
 import "./Cart.css";
+import { ProductContext } from "../../App";
 
-const Cart = (props) => {
-  console.log("Cart props: ", props);
-  const totalProducts = props.productsInCart.length;
+const Cart = () => {
+  const { productsInCart } = useContext(ProductContext);
 
   return (
     <div className="cart-wrap">
@@ -22,7 +23,7 @@ const Cart = (props) => {
           />
         </svg>
       </div>
-      <span>{totalProducts}</span>
+      <span>{productsInCart.length}</span>
     </div>
   );
 };
