@@ -27,6 +27,7 @@ function App() {
 
   const onAddTodo = (newTodo) => {
     const newTodps = [...todos, newTodo];
+    console.log("newTodo", newTodo);
     setTodos(newTodps);
   };
 

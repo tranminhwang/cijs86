@@ -12,7 +12,16 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <input type="text" id="input">
+  </div>
+  <script>
+    const inputEl = document.getElementById('input');
+
+    inputEl.addEventListener('input', (e) => {
+      console.log(e.target.value);
+    })
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

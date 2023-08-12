@@ -3,7 +3,7 @@ import { useState } from "react";
 const TodoFormInput = (props) => {
   const [isValidChar, setIsValidChar] = useState(true);
   // const [value, setValue] = useState("");
-
+  console.log("render");
   // console.log("render");
   let inputValue = "";
 
