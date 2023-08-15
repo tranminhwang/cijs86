@@ -7,9 +7,6 @@ const HomeComponent = () => {
 
   useEffect(() => {
     if (!isLoggedIn) {
-      // redirect to login page
-      // window.location.href = "/sign-in";
-      // console.log("navigate ababa", navigate);
       navigate("/sign-in");
     }
   }, []);
