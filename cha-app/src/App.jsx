@@ -2,6 +2,8 @@ import "./App.css";
 import { getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { FirebaseContext } from "./context/FirebaseProvider";
 import { useContext, useEffect, useState } from "react";
+import { Spinner } from "@nextui-org/react";
+
 import MessagePage from "./components/MessagePage";
 
 function App() {
@@ -22,7 +24,12 @@ function App() {
     });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div className="w-screen h-screen flex justify-center items-center">
+        <Spinner />
+      </div>
+    );
 
   return user ? (
     <MessagePage />

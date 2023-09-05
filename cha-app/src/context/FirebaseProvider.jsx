@@ -19,6 +19,7 @@ export const FirebaseContext = createContext();
 const FirebaseProvider = ({ children }) => {
   const db = getFirestore(app);
   const msgCollection = collection(db, "messages");
+  const testCollection = collection(db, "test");
   const googleProvider = new GoogleAuthProvider();
 
   return (
@@ -27,6 +28,7 @@ const FirebaseProvider = ({ children }) => {
         app,
         msgCollection,
         googleProvider,
+        testCollection,
       }}
     >
       {children}
