@@ -5,10 +5,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      position: relative;
+      height: 200vh;
+    }
+
+    .wrapper {
+      position: relative;
+      background-color: aqua;
+      height: 600px;
+      width: 50vw;
+    }
+
+    .container {
+      position: relative;
+      background-color: blue;
+      height: 400px;
+      width: 50vw;
+    }
+
+    .box {
+      background-color: red;
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /* margin-top: 30px; */
+      /* top: 30px; */
+      /* bottom: 0px;
+      left: 0px; */
+
+      /* left: 300px; */
+      /* border-radius: 50%; */
+      /* border: 2px solid black; */
+      /* padding-top: 20px;
+      padding-right: 40px;
+      padding-bottom: 30px;
+      padding-left: 10px; */
+      /* padding: 40px 0; */
+      /* padding-bottom: 10px; */
+      /* margin-bottom: 10px; */
+      /* margin-left: 300px; */
+      /* margin: 0 auto; */
+    }
+
+    .child {
+      width: 50%;
+      height: 50%;
+      background-color: yellow;
+    }
+
+    .child_2 {
+      background-color: orange;
+      width: 50%;
+      height: 50%;
+    }
+
+    .header {
+      height: 70px;
+      width: 100vw;
+      background-color: brown;
+      position: fixed;
+      z-index: 10;
+    }
+
+    .scroll-top {
+      position: sticky;
+      top: 10px;
+      right: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- 300x300, background: red 
+  border
+  content
+  padding
+  margin
 
+  position: static, relative, absolute, fixed, sticky
+  relative:
+  -->
+
+  <header class="header"></header>
+  <div class="wrapper">
+    <div class="container">
+      <!-- <div class="box" style="z-index: 10;">
+        <div class="child">
+          <div class="child_2"></div>
+        </div>
+      </div> -->
+      <!-- <div class="box" style="background-color: pink; left: 10px;"></div>
+      <div class="box" style="background-color: black;"></div> -->
+    </div>
+  </div>
+  <p>This is p</p>
+  <h1>This is a</h1>
+  <button>Submit</button>
+  <button class="scroll-top">scroll to top</button>
 </body>
 
 </html>
