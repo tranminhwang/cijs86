@@ -19,11 +19,6 @@ const MessagePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { currentUser } = getAuth();
   const ref = useRef(null);
-  const numbers = null;
-  console.log(
-    "AAA",
-    map(numbers, (number) => number * 2)
-  );
 
   const singleDoc = doc(testCollection, "4xTRjyz6iAKZG6ID5PaL");
 

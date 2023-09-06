@@ -2,7 +2,7 @@ import "./App.css";
 import { getAuth, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { FirebaseContext } from "./context/FirebaseProvider";
 import { useContext, useEffect, useState } from "react";
-import { Spinner } from "@nextui-org/react";
+import { Spinner, Button } from "@nextui-org/react";
 
 import MessagePage from "./components/MessagePage";
 
@@ -34,8 +34,10 @@ function App() {
   return user ? (
     <MessagePage />
   ) : (
-    <div>
-      <button onClick={loginWithGoogle}>Login With Google</button>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <Button color="primary" onClick={loginWithGoogle}>
+        Login With Google
+      </Button>
     </div>
   );
 }
